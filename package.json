@@ -1,0 +1,22 @@
+{
+  "name": "object-persist",
+  "version": "1.0.0",
+  "description": "Persist JSON objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nohorjo/object-persist.git"
+  },
+  "keywords": [
+    "persist"
+  ],
+  "author": "Muhammed Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nohorjo/object-persist/issues"
+  },
+  "homepage": "https://github.com/nohorjo/object-persist#readme"
+}
