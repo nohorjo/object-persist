@@ -6,13 +6,17 @@ module.exports = function(opts) {
         parse: JSON.parse,
         enc: 'utf8',
         filename: 'data.json',
+        default: {},
         ...opts,
     };
 
-    let data = {};
+    let data = opts.default;
 
     try {
-        data = opts.parse(fs.readFileSync(opts.filename, opts.enc));
+        data = {
+            ...data,
+            ...opts.parse(fs.readFileSync(opts.filename, opts.enc)),
+        };
     } catch (e) {
         if (e.code !== 'ENOENT') throw e;
         fs.writeFileSync(opts.filename, opts.stringify(data), opts.enc);
